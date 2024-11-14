@@ -6,21 +6,44 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:api": "tsx --watch api/index.ts",
+    "dev:client": "tsx client/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "cross-env DB_MIGRATING=true tsx db/migrate.ts",
+    "db:seed": "cross-env DB_SEEDING=true tsx db/seed.ts"
   },
   "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "argon2": "^0.41.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.7",
+    "drizzle-orm": "^0.36.2",
+    "drizzle-zod": "^0.5.1",
+    "express": "^4.21.1",
+    "lucide-react": "^0.456.0",
+    "next": "15.0.3",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "typed-rpc": "^6.1.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
+    "drizzle-kit": "^0.28.1",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "typescript": "^5"
   }
 }
